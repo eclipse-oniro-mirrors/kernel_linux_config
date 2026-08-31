@@ -34,6 +34,16 @@ kernel/linux/config
         └── phone_defconfig                           # 手机类型产品相关配置文件
 ```
 
+针对开源开发板HiSpark AiFly（Linux 6.6），给出对应的配置目录结构、文件示例：
+```
+kernel/linux/config
+└── linux-6.6
+    └── hispark_aifly                                 # 厂商平台配置目录
+        └── arch
+            ├── arm64_defconfig                       # HiSpark AiFly开发板64位基础配置文件
+            └── support_defconfig                     # HiSpark AiFly开发板外设支持配置文件，包含HDF驱动、Wi-Fi/蓝牙/星闪、EC20 4G模组、MIPI显示及GT911触摸屏等配置
+```
+
 ## 内核的Config组成模块<a name="section28381947133910"></a>
 
 1. 基础通用配置文件（base）：其中包含OpenHarmony特性依赖的内核必选模块以及安全红线特性等必须开启的配置项，其中配置不可被覆盖。如需新增、调整其中配置需上内核-sig例会进行评审。默认必选配置文件。

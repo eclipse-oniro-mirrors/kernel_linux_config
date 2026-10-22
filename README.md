@@ -29,6 +29,8 @@ For more information about Linux LTS 5.10.y, visit the [official kernel website]
 
 	Configuration file for the open-source development board Hi3516D V300 used in the standard system 
 
+	Configuration files for the open-source development board HiSpark AiFly based on Linux 6.6: **arch/arm64\_defconfig** provides the basic 64-bit board configuration, and **arch/support\_defconfig** provides peripheral support, including HDF drivers, Wi-Fi/Bluetooth/NearLink, the Quectel EC20 4G module, MIPI display, and the GT911 touchscreen.
+
 ## Directory Structure<a name="section161941989596"></a>
 
 ```
@@ -41,14 +43,19 @@ kernel/linux/config
 │               ├── hi3516dv300_standard_defconfig    # Standard-system defconfig of the open-source Hi3516D V300 development board from HiSilicon
 │               ├── small_common_defconfig            # Common defconfig of the small-system kernel
 │               └── standard_common_defconfig         # Common defconfig of the standard-system kernel
-└── linux-5.10
-    └── arch
-        └── arm
-            └── configs
-                ├── hi3516dv300_small_defconfig       # Small-system defconfig of the open-source Hi3516D V300 development board from HiSilicon
-                ├── hi3516dv300_standard_defconfig    # Standard-system defconfig of the open-source Hi3516D V300 development board from HiSilicon
-                ├── small_common_defconfig            # Common defconfig of the small-system kernel
-                └── standard_common_defconfig         # Common defconfig of the standard-system kernel
+├── linux-5.10
+│   └── arch
+│       └── arm
+│           └── configs
+│               ├── hi3516dv300_small_defconfig       # Small-system defconfig of the open-source Hi3516D V300 development board from HiSilicon
+│               ├── hi3516dv300_standard_defconfig    # Standard-system defconfig of the open-source Hi3516D V300 development board from HiSilicon
+│               ├── small_common_defconfig            # Common defconfig of the small-system kernel
+│               └── standard_common_defconfig         # Common defconfig of the standard-system kernel
+└── linux-6.6
+    └── hispark_aifly
+        └── arch
+            ├── arm64_defconfig                       # 64-bit (arm64) defconfig of the open-source HiSpark AiFly development board
+            └── support_defconfig                     # Peripheral support defconfig of the open-source HiSpark AiFly development board
 ```
 
 ## Usage<a name="section1393789267"></a>
